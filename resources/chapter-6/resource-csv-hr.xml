@@ -136,6 +136,28 @@
                         </script>
                     </condition>
                 </inbound>
+                <inbound>
+                <!-- 部長をワークフロー承認者とする -->
+                    <expression>
+                        <assignmentTargetSearch>
+                            <targetType>RoleType</targetType>
+                            <filter>
+                                <q:equal>
+                                    <q:path>name</q:path>
+                                    <q:value>Approver</q:value>
+                                </q:equal>
+                            </filter>
+                        </assignmentTargetSearch>
+                    </expression>
+                    <target>
+                        <path>$focus/assignment</path>
+                    </target>
+                    <condition>
+                        <script>
+                            <code>input == "部長"</code>
+                        </script>
+                    </condition>
+                </inbound>
             </attribute>
             <activation>
                 <administrativeStatus>
