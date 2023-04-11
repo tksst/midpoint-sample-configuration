@@ -158,6 +158,23 @@
                         </script>
                     </condition>
                 </inbound>
+                <inbound>
+                <!-- 全ユーザをログイン可能とする -->
+                    <expression>
+                        <assignmentTargetSearch>
+                            <targetType>RoleType</targetType>
+                            <filter>
+                                <q:equal>
+                                    <q:path>name</q:path>
+                                    <q:value>End user</q:value>
+                                </q:equal>
+                            </filter>
+                        </assignmentTargetSearch>
+                    </expression>
+                    <target>
+                        <path>$focus/assignment</path>
+                    </target>
+                </inbound>
             </attribute>
             <activation>
                 <administrativeStatus>
