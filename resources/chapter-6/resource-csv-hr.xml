@@ -159,6 +159,36 @@
                     </condition>
                 </inbound>
                 <inbound>
+                    <!-- 開発部の部長をDevelopment Application Roleの承認者とする -->
+                    <source>
+                        <path>$projection/attributes/orgnum</path>
+                    </source>
+                    <expression>
+                        <assignmentTargetSearch>
+                            <targetType>RoleType</targetType>
+                            <filter>
+                                <q:equal>
+                                    <q:path>name</q:path>
+                                    <q:value>Development Application Role</q:value>
+                                </q:equal>
+                            </filter>
+                            <assignmentProperties>
+                                <relation xmlns:org="http://midpoint.evolveum.com/xml/ns/public/common/org-3">org:approver</relation>
+                            </assignmentProperties>
+                        </assignmentTargetSearch>
+                    </expression>
+                    <target>
+                        <path>$focus/assignment</path>
+                    </target>
+                    <condition>
+                        <script>
+                            <code>
+                               return input == "部長" &amp;&amp; orgnum.startsWith("12")
+                           </code>
+                        </script>
+                    </condition>
+                </inbound>
+                <inbound>
                 <!-- 全ユーザをログイン可能とする -->
                     <expression>
                         <assignmentTargetSearch>
