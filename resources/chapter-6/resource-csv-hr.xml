@@ -23,7 +23,7 @@
     <connectorConfiguration>
         <icfc:configurationProperties
                     xmlns:icfccsvfile="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/bundle/com.evolveum.polygon.connector-csv/com.evolveum.polygon.connector.csv.CsvConnector">
-            <icfccsvfile:filePath>/opt/midpoint/var/resources/chapter-3/hr.csv</icfccsvfile:filePath>
+            <icfccsvfile:filePath>/opt/midpoint/var/resources/chapter-4/hr.csv</icfccsvfile:filePath>
             <icfccsvfile:encoding>utf-8</icfccsvfile:encoding>
             <icfccsvfile:fieldDelimiter>,</icfccsvfile:fieldDelimiter>
             <icfccsvfile:multivalueDelimiter>;</icfccsvfile:multivalueDelimiter>
