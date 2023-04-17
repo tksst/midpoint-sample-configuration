@@ -1,0 +1,24 @@
+- orgリソースの設定
+- hrリソースの登録
+- hrリソースの修正(chapter-4に変更)
+- 組織のインポート
+- ユーザのインポート
+
+- 連携先のインポート
+  - DB
+  - LDAP
+  - CSV
+
+- ロールのインポート
+  
+- 組織・ユーザーのリコンサイル
+
+- 001にApproverのアサイン、Development Application Role の承認者としてのアサイン
+- Development Application Role を 要求可能にする
+
+- 001 と 023 に End user をアサイン
+- 023 が Development Application Role を要求し、001が承認する
+
+
+- キャンペーンとキャンペーンタスクを定義
+- 001 に Reviewer のアサイン
